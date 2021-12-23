@@ -8,8 +8,11 @@ export default function handler(req, res) {
 
 export default async function getData(req, res) {
   const queryString = `query MyQuery {
-  unsplash_Search(query: "snowflake", per_page: 1, page: 1) {
-    results
+  unsplash_Random_Photo_By_Query(query: "snowflake") {
+    urls {
+      full
+    }
+    description
   }
 }`;
 

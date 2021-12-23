@@ -19,7 +19,7 @@ export default function Home() {
   if (error) return <div>{error.message}</div>;
   if (!data) return <div>Loading...</div>;
 
-  if (data.data.data.unsplash_Search.results[0].urls.full === null) {
+  if (data.data.data.unsplash_Random_Photo_By_Query.urls.full === null) {
     return <div>null response</div>;
   } else {
     return (
@@ -35,7 +35,7 @@ export default function Home() {
             <div className={styles.card}>
               <h2>Generate a random image of a snowflake &rarr;</h2>
               <Image
-                src={data.data.data.unsplash_Search.results[0].urls.full}
+                src={data.data.data.unsplash_Random_Photo_By_Query.urls.full}
                 alt="snowflake"
                 width="100%"
                 height="100%"
